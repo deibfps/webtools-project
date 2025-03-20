@@ -1,0 +1,313 @@
+@import url('../rootstyle.css');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--page-bg);
+    background-image: url('fondo.png');
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: cover;
+    padding-top: 0.6em;
+    transition: var(--default-transition);
+}
+
+header {
+    padding: 2em 1em;
+    font-size: 0.8em;
+    font-weight: bolder;
+}
+
+
+.barradenavegacion {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    background-color: var(--nav-bar-bg);
+    transition: var(--default-transition);
+    padding: 1em 2em; 
+    z-index: 10; 
+    border-bottom: 4px solid transparent; 
+    border-image: linear-gradient(to right, var(--gradient-1), var(--gradient-2)) 1; 
+    padding-top: 1.5em;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    width: 2.5em;
+    margin-right: 0.625em;
+}
+
+#theme-switcher{
+	background-color: var(--switch-bg);
+	border-radius: 50px;
+	display: flex;
+	align-items: center;
+	gap: 1.33em;
+    cursor: pointer;
+	padding: 0.66rem;
+	position: relative;
+    top: 0px;
+    left: 10px;
+	transform: var(--default-border-radius);
+    transition: background-color 0.3s ease-in-out;
+}
+
+#theme-switcher::before{
+	content : '';
+	position: absolute;
+	width: 2.22rem;
+	height: 2.22rem;
+	background-color: var(--switch-circle-bg);
+	border-radius: 50px;
+	z-index: 0;
+	left: 0; 
+	transform: translatex(var(--switch-circle-pos));
+	transition: var(--default-transition);
+}
+
+#theme-switcher svg{
+	z-index: 1;
+	transition: var(--default-transition);
+}
+
+#icon-sun{
+    fill: var(--icon-sun);
+}
+
+#icon-moon{
+    fill: var(--icon-moon);
+}
+
+span {
+    font-weight: 3em;
+    color: var(--primary-text);
+    transition: var(--default-transition);
+}
+
+ul.linksdenavegacion {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+    margin: 0;
+    flex: 1;
+}
+
+ul.linksdenavegacion a {
+    color: var(--link-nav-bar);
+    font-family: inherit;
+    font-weight: 800;
+    cursor: pointer;
+    text-transform: uppercase;
+    padding: 10px;
+    text-decoration: none;
+    display: inline-block;
+    transition: var(--default-transition);
+}
+
+ul.linksdenavegacion a:hover,
+ul.linksdenavegacion a:focus {
+    background-image: var(--link-nav-bar-grad);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;
+    transform: scale(1.25);
+}
+
+ul.linksdenavegacion a:after {
+    content: "";
+    pointer-events: none;
+    bottom: -2px;
+    left: 50%;
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: #d9d8d8;
+}
+
+button {
+    cursor: pointer;
+    position: relative;
+    padding: 0.4em 1.5em;
+    font-size: 1.125em;
+    color: var(--primary-text);
+    border: 0.125em solid var(--primary-text);;
+    transition: var(--default-transition);
+    border-radius: 2.125em;
+    background-color: transparent;
+    font-weight: 600;
+    transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+    overflow: hidden;
+}
+
+button::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 3.125em;
+    height: 1em;
+    border-radius: inherit;
+    scale: 0;
+    z-index: -1;
+    background-color: var(--gradient-1);
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+button:hover::before {
+    scale: 4;
+}
+
+button:hover {
+    color: var(--input-bg);
+    scale: 1.1;
+}
+
+button:active {
+    scale: 1;
+}
+
+#titlebanner {
+    width: 85%;
+    margin: 0.7em auto;
+    padding: 2.5em;
+    background-image: linear-gradient(to right, var(--darker-gradient-1), var(--darker-gradient-2));
+    transition: var(--default-transition);
+    color: #fff;
+    display: flex;
+    letter-spacing: 0.3em;
+    justify-content: left;
+}
+
+#titlebanner h1 {
+    font-family: 'Chau Philomene One', sans-serif;
+    font-size: 2.3em;
+    margin-top: 0.5em;
+    font-weight: lighter;
+    position: relative;
+    padding-top: 0.3em;
+}
+
+#titlebanner h5 {
+    font-size: 0.7em;
+    font-family: 'Montserrat', sans-serif;
+    position: absolute;
+}
+
+#intro, #nosotros, #secciones {
+    padding: 1em 5em 1em 5em;
+    color: var(--primary-text);
+    transition: var(--default-transition);
+}
+
+#intro h2, #nosotros h2, #secciones h2 {
+    font-family: 'Chau Philomene One', sans-serif;
+    letter-spacing: 0.01em;
+    font-size: 1.5em;
+    color: var(--primary-text);
+    transition: var(--default-transition);
+}
+
+#intro h4, #nosotros h4, #secciones h4 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--primary-text);
+}
+
+article {
+    border-radius: 30px;
+    background: var(--home-card-bg); /* Aqui ponle el color de la barra de navegacion plis*/
+    transition: var(--default-transition);
+    box-shadow: 8px 8px 14px var(--home-shadow-1), -8px -8px 14px var(--home-shadow-2);
+    transition: var(--default-transition);
+    margin: 2em;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    position: relative;
+}
+
+#imagencont {
+    padding: 0 3em 0 3em;
+}
+
+#imagencont img {
+    width: 20em;
+    border-radius: 30px;
+}
+
+#textcont {
+    padding: 1em 3em 1.5em 0;
+}
+
+#textcont2 {
+    padding: 1em 0 1.5em 4em;
+}
+
+#nosotros h2 {
+    font-size: 2.5em;
+    color: var(--primary-text);
+    transition: var(--default-transition);
+}
+
+#nosotros h2, #nosotros h4 {
+    margin-top: -0.5em;
+    color: var(--primary-text);
+    transition: var(--default-transition);
+}
+
+#nosotros p {
+    margin-top: -1em;
+    color: var(--primary-text);
+    transition: var(--default-transition);
+}
+
+#nosotros {
+    margin: 2em 0 2em 0;
+}
+
+footer {
+    font-family: 'Montserrat', sans-serif;
+    background-image: linear-gradient(to right, var(--darker-gradient-1), var(--darker-gradient-2));
+    color: #ffff;
+    font-weight: bolder;
+    padding: 1.5em;
+    margin: -0.49em;
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+    #titlebanner {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #intro, #nosotros, #secciones {
+        padding: 1em;
+    }
+
+    article {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #imagencont img {
+        width: 15em;
+    }
+
+    ul.linksdenavegacion {
+        flex-direction: column;
+    }
+
+    .barradenavegacion {
+        flex-direction: column;
+    }
+}

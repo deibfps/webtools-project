@@ -1,0 +1,245 @@
+@import url('../../../../rootstyle.css');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-image: var(--bg-img);
+    transition: background-image 1s;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin: 0;
+    min-height: 100vh;
+    overflow: hidden;
+    height: 100vh;
+}
+
+header {
+    display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 5.33rem;
+    padding: 2em 1em;
+    font-size: 0.8em;
+    font-weight: bolder;
+}
+
+.barradenavegacion {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    background-color: transparent;
+    padding: 1em 2em; 
+    z-index: 10; 
+    border-bottom: 4px solid transparent; 
+    border-image: linear-gradient(to right, var(--gradient-1), var(--gradient-2)) 1; 
+    padding-top: 1.5em;
+}
+ 
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    width: 2.5em;
+    margin-right: 0.625em;
+}
+
+span {
+    color: var(--team-name);
+    transition: var(--default-transition);
+}
+
+ul.linksdenavegacion {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+    margin: 0;
+    flex: 1;
+}
+
+ul.linksdenavegacion a {
+    color: var(--link-nav-bar);
+    font-family: inherit;
+    font-weight: 800;
+    cursor: pointer;
+    text-transform: uppercase;
+    padding: 10px;
+    text-decoration: none;
+    display: inline-block;
+    transition: var(--default-transition);
+}
+
+ul.linksdenavegacion a:hover,
+ul.linksdenavegacion a:focus {
+    background-image: var(--link-nav-bar-grad);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;
+    transform: scale(1.25);
+}
+
+ul.linksdenavegacion a:after {
+    content: "";
+    pointer-events: none;
+    bottom: -2px;
+    left: 50%;
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: #d9d8d8;
+}
+
+#theme-switcher{
+	background-color: var(--switch-bg);
+	border-radius: 50px;
+	display: flex;
+	align-items: center;
+	gap: 1.33em;
+    cursor: pointer;
+	padding: 0.66rem;
+	position: relative;
+    top: 0px;
+    left: 10px;
+	transform: var(--default-border-radius);
+    transition: background-color 0.3s ease-in-out;
+}
+
+#theme-switcher::before{
+	content : '';
+	position: absolute;
+	width: 2.22rem;
+	height: 2.22rem;
+	background-color: var(--switch-circle-bg);
+	border-radius: 50px;
+	z-index: 0;
+	left: 0; 
+	transform: translatex(var(--switch-circle-pos));
+	transition: var(--default-transition);
+}
+
+#theme-switcher svg{
+	z-index: 1;
+	transition: var(--default-transition);
+}
+
+#icon-sun{
+    fill: var(--icon-sun);
+}
+
+#icon-moon{
+    fill: var(--icon-moon);
+}
+
+/* FIN DE COPY PASTEE*/
+
+
+    h1 {
+        font-size: 2.8125em;
+        margin-bottom: 0.625em;
+    }
+
+    h2 {
+        font-style: italic;
+        font-family: 'Montserrat';
+        font-size: 1.25em;
+    }
+
+    main {
+        text-align: center;
+        transition: var(--default-transition);
+    }
+
+    .main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 60vh;
+    }
+
+    .main p {
+        padding: 0 25%;
+    }
+
+    footer {
+    color: var(--team-name);
+    position: absolute;
+    bottom: -1em;
+    transition: var(--default-transition);
+    padding: .5em;
+    }
+
+    button {
+        cursor: pointer;
+        position: relative;
+        padding: 0.4em 1.5em;
+        font-size: 1.125em;
+        color: var(--input-bg);
+        transition: var(--default-transition);
+        border: solid 2px;
+        border-color: #fff;
+        border-radius: 2.125em;
+        background: var(--link-nav-bar-grad); 
+        font-weight: 600;
+        transition: background 0.5s cubic-bezier(0.23, 1, 0.320, 1), 
+                    color 0.5s cubic-bezier(0.23, 1, 0.320, 1), 
+                    transform 0.3s ease-in-out; /* Agrega transición a transform */
+        overflow: hidden;
+    }
+    
+    button::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        margin: auto;
+        width: 3.125em;
+        height: 1em;
+        border-radius: inherit;
+        scale: 0;
+        z-index: -1;
+        transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+    }
+    
+    button:hover::before {
+        scale: 3;
+    }
+    
+    button:hover {
+        transform: scale(1.1); /* Usa transform en lugar de scale directamente */
+    }
+    
+    button:active {
+        transform: scale(1);
+    }
+    
+    .div {
+        display: inline-block;
+        transition: 200ms ease-in-out font-size;
+    }
+    
+    .div:hover {
+        font-size: 2em;
+    }
+    
+    .space {
+        margin: 0 .2em;
+    }
+    
+    .main {
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeInUp 1.5s ease-in-out forwards;
+    }
+    
+    @keyframes fadeInUp {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }

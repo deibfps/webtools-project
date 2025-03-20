@@ -1,0 +1,103 @@
+:root[data-theme="light"] {
+	--page-bg: #fff;
+
+	--bg-img: url('./fondoclaro.png');
+
+	--cultural-bg-img: url('fondopunk.png');
+
+	--gender-bg-img: url('fondogender.png');
+
+	--indi-bg-img: url('fondoindi.png');
+
+	--lgbt-bg-img: url('fondolgbt.png');
+
+	--primary-text: #3C3A47;
+	--muted-text: #B1B0B5;
+
+	--input-bg: #F5F5F6;
+
+	--switch-bg: #F5F5F6;
+	--switch-circle-bg: #FFD371;
+	--switch-circle-pos: 0.3rem;
+	--icon-sun: #997F44;
+	--icon-moon: #B1B0B5; 
+
+	--team-name: black;
+	--nav-bar-bg: #f2f3e8;
+	--link-nav-bar: black;
+	--link-nav-bar-hover: #e4007c;
+
+	--home-card-bg: #f2f3e8;
+
+	--book-bg: #E4E4E4;
+
+	--book-cover-bg: #e2e2e2;
+
+	--cover-p: #ffffff;
+
+	--home-shadow-1: #b8b5b8;
+	--home-shadow-2: #ffffff;
+
+	--gradient-1: #f8accc;
+	--gradient-2: #ffbc94;
+
+	--darker-gradient-1: #f8accc;
+	--darker-gradient-2: #ffbc94;
+
+	--link-nav-bar-grad: linear-gradient(to right, #e4007c, #ff914d);
+}
+
+:root[data-theme="dark"] {
+	--page-bg: #3C3A47;
+
+	--bg-img: url('fondodark.png');
+
+	--cultural-bg-img: url('fondopunkdark.png');
+
+	--gender-bg-img: url('fondogenderdark.png');
+
+	--indi-bg-img: url('fondoindidark.png');
+
+	--lgbt-bg-img: url('fondolgbtdark.png');
+
+	--primary-text: #f5f5f6;
+	--secondary-text: #e8e8e9;
+	--muted-text: #77757E;
+
+	--input-bg: #2D2C35;
+
+	--switch-bg: var(--input-bg);
+	--switch-circle-bg: #7190FF;
+	--switch-circle-pos: 2.8275rem;
+	--icon-sun: var(--muted-text);
+	--icon-moon: #DCE3FF;
+
+	--team-name: white;
+	--nav-bar-bg: #211F29;
+	--link-nav-bar: gray;
+	--link-nav-bar-hover: #D19361;
+
+	--home-card-bg: #3d3d3d;
+
+	--book-bg: #77757e;
+
+	--book-cover-bg: #adadad;
+
+	--cover-p: #fff;
+
+	--home-shadow-1: #3d3d3d;
+	--home-shadow-2: #202020;
+
+	--gradient-1: #acf8cc;
+	--gradient-2: #94bcff;
+
+	--darker-gradient-1: #2b4b3f;
+	--darker-gradient-2: #23354e;
+
+	--link-nav-bar-grad: linear-gradient(to right, #acf8cc, #94bcff);
+}
+
+:root {
+	--default-border-radius: 8px;
+	--default-transition: color .3s ease-in-out, background-color .3s ease-in-out, border-color .3s ease-in-out, fill .3s ease-in-out, transform .3s ease-in-out;	
+}

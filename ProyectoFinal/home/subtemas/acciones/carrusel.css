@@ -1,0 +1,298 @@
+@import url(../../../rootstyle.css);
+
+.carrusel {
+    position: relative;
+    width: 80%;
+    max-width: 100%;
+    height: 400px; 
+    margin: auto;
+    overflow: hidden;
+}
+
+.carrusel-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    height: 100%;
+}
+
+.carrusel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    padding: 50px;
+    text-align: center;
+    height: 100%;
+}
+
+.carruselboton {
+    position: absolute;
+    top: 56.5%;
+    left: 0;
+    right: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    z-index: 20;
+}
+
+.carruselboton button {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 24px;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carruselboton button.prev {
+    margin-left: 10px;
+}
+
+.carruselboton button.next {
+    margin-right: 10px;
+}
+
+
+@media screen and (max-width: 768px) {
+    .carrusel {
+        width: 95%;
+    }
+    
+    .carrusel-item h2 {
+        font-size: 1.5em; 
+    }
+    
+    .carrusel-item p {
+        font-size: 1em; 
+    }
+    
+    .carruselboton button {
+        font-size: 18px; 
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .carrusel {
+        width: 100%;
+        height: 300px; 
+    }
+
+    .carrusel-item h2 {
+        font-size: 1.2em; 
+    }
+    
+    .carrusel-item p {
+        font-size: 0.9em;
+    }
+    
+    .carruselboton button {
+        font-size: 16px; 
+    }
+}
+
+header {
+	padding: 2em 1em;
+    font-size: 0.8em;
+    font-weight: bolder;
+}
+
+#theme-switcher{
+	background-color: var(--switch-bg);
+	border-radius: 50px;
+	display: flex;
+	align-items: center;
+	gap: 1.33em;
+    cursor: pointer;
+	padding: 0.66rem;
+	position: relative;
+    top: 0px;
+    left: 10px;
+	transform: var(--default-border-radius);
+    transition: background-color 0.3s ease-in-out;
+}
+
+#theme-switcher::before{
+	content : '';
+	position: absolute;
+	width: 2.22rem;
+	height: 2.22rem;
+	background-color: var(--switch-circle-bg);
+	border-radius: 50px;
+	z-index: 0;
+	left: 0; 
+	transform: translatex(var(--switch-circle-pos));
+	transition: var(--default-transition);
+}
+
+#theme-switcher svg{
+	z-index: 1;
+	transition: var(--default-transition);
+}
+
+#icon-sun{
+    fill: var(--icon-sun);
+}
+
+#icon-moon{
+    fill: var(--icon-moon);
+}
+
+.barradenavegacion {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    background-color: var(--nav-bar-bg);
+    transition: var(--default-transition);
+    padding: 1em 2em; 
+    z-index: 10; 
+    border-bottom: 4px solid transparent; 
+    border-image: linear-gradient(to right, var(--gradient-1), var(--gradient-2)) 1; 
+    padding-top: 1.5em;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    width: 2.5em;
+    margin-right: 0.625em;
+}
+
+span {
+    font-weight: 3em;
+    color: #000000;
+}
+
+ul.linksdenavegacion {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+    margin: 0;
+    flex: 1;
+}
+
+ul.linksdenavegacion a {
+    color: var(--link-nav-bar);
+    font-family: inherit;
+    font-weight: 800;
+    cursor: pointer;
+    text-transform: uppercase;
+    padding: 10px;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: color;
+    text-decoration: none;
+}
+
+ul.linksdenavegacion a:hover,
+ul.linksdenavegacion a:focus {
+    background-image: var(--link-nav-bar-grad);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;
+}
+
+ul.linksdenavegacion a:after {
+    content: "";
+    pointer-events: none;
+    bottom: -2px;
+    left: 50%;
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: #d9d8d8;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: width, left;
+}
+
+/* Codigo del boton */ 
+button {
+    cursor: pointer;
+    position: relative;
+    padding: 10px 24px;
+    font-size: 18px;
+    color: #e4007c;
+    border: 2px solid #e4007c;
+    border-radius: 34px;
+    background-color: transparent;
+    font-weight: 600;
+    transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+    overflow: hidden;
+    }
+    
+    button::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        margin: auto;
+        width: 50px;
+        height: 50px;
+        border-radius: inherit;
+        scale: 0;
+        z-index: -1;
+        background-color: linear-gradient(90deg, var(--gradient-1), var(--gradient-2));
+        transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+    }
+    
+    button:hover::before {
+        scale: 3;
+    }
+    
+    button:hover {
+        color: #fff;
+        scale: 1.1;
+        background: linear-gradient(90deg, var(--gradient-1), var(--gradient-2));
+        border-color: transparent;
+    }
+    
+    button:active {
+        scale: 1;
+    }
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--page-bg);
+    transition: var(--default-transition);
+    padding-top: 3em;
+    padding-bottom: 0em;
+}
+
+#team-name-top {
+    color: var(--team-name);
+    transition: var(--default-transition);
+}
+
+#team-name-footer {
+    color: var(--team-name);
+    position: absolute;
+    bottom: 0em;
+    transition: var(--default-transition);
+    left: .5em;
+}
+
+#carrusel-respect, #carrusel-listen, #carrusel-feel, #carrusel-equality, #carrusel-educate, #carrusel-foment, #carrusel-talk, #carrusel-break{
+    color: var(--primary-text);
+    transition: var(--default-transition);
+}
+
+#respect-p, #listen-p, #feel-p, #equality-p, #educate-p, #foment-p, #talk-p, #break-p{
+    color: var(--secondary-text);
+    transition: var(--default-transition);
+}
